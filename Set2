@@ -50,11 +50,11 @@ public class Main
  
    public static void main(String[] args) {
       int[] arr={5,7,1,9,3,8,4,6};
-      System.out.println("Numbers : ");
+      System.out.println("Beofre Sorting : ");
       System.out.println(Arrays.toString(arr));
       arr=heapSort(arr);
       System.out.println("===================================");
-      System.out.println("Sorting Algorithm : ");
+      System.out.println("After Sorting : ");
       System.out.println(Arrays.toString(arr));
    }
 }
