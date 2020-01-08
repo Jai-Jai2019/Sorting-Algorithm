@@ -26,30 +26,30 @@ public class Main {
    public static void exchange(int[] arr,int i, int j) {
         int t = arr[i];
         arr[i] = arr[j];
-        arr[j] = t; 
+        arr[j] = t;
    }
    public static int[] heapSort(int[] arr) {
       buildheap(arr);
+      int c =0;
       int sizeOfHeap=arr.length-1;
       for(int i=sizeOfHeap; i>0; i--) {
          exchange(arr,0, i);
          sizeOfHeap=sizeOfHeap-1;
          heapify(arr, 0,sizeOfHeap);
+          c++;
+          System.out.println("Counter Variable #: " + c);
       }
       return arr; 
    }
- 
    public static void main(String[] args) {
-      int ctr = 0;
-      int[] arr={5,7,1,9,3,8,4,6};
-      ctr++;
-      System.out.println("Before Sorting : ");
+      int[] arr={5,7,1,2,3,4,9,8};
+      System.out.println("Beofre Sorting : ");
       System.out.println(Arrays.toString(arr));
-      arr=heapSort(arr);
       System.out.println("===================================");
       System.out.println("After Sorting : ");
       System.out.println(Arrays.toString(arr));
       System.out.println("===================================");
-      System.out.println("Counter Variable Count: " + ctr);
+      arr=heapSort(arr);
+      System.out.println("===================================");
    }
 }
