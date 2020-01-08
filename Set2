@@ -43,7 +43,7 @@ public class Main {
       int ctr = 0;
       int[] arr={5,7,1,9,3,8,4,6};
       ctr++;
-      System.out.println("Beofre Sorting : ");
+      System.out.println("Before Sorting : ");
       System.out.println(Arrays.toString(arr));
       arr=heapSort(arr);
       System.out.println("===================================");
