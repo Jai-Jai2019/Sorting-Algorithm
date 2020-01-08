@@ -9,29 +9,6 @@ public class Main {
 		quickSort(0, array.length-1);
 	}
 	private static void quickSort(int left, int right) {
-		int i = left;
-		int j = right;
-		int pivot = array[left+(right-left)/2];
- 
-		while (i <= j) {
-			while (array[i] < pivot) { i++; } while (array[j] > pivot) {
-				j--;
-			}
-			if (i <= j) {
-				exchange(i, j);
-				i++;
-				j--;
-			}import java.util.Arrays;
-public class Main {
-	private static int array[];
-	public static void sort(int[] arr) {
-		if (arr == null || arr.length == 0) {
-			return;
-		}
-		array = arr;
-		quickSort(0, array.length-1);
-	}
-	private static void quickSort(int left, int right) {
 		int cv = 0;
 		int i = left;
 		int j = right;
