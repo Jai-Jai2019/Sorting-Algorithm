@@ -1,15 +1,11 @@
 import java.util.*;
 
-public class Main
-{
-
+public class Main {
    public static void buildheap(int []arr) {
-      
     for(int i=(arr.length-1)/2; i>=0; i--){
      heapify(arr,i,arr.length-1);
       }
    }
- 
    public static void heapify(int[] arr, int i,int size) { 
       int left = 2*i+1;
       int right = 2*i+2;
@@ -19,25 +15,20 @@ public class Main
       } else {
        max=i;
       }
- 
       if(right <= size && arr[right] > arr[max]) {
        max=right;
       }
-
       if(max!=i) {
          exchange(arr,i, max);
          heapify(arr, max,size);
       }
    }
- 
    public static void exchange(int[] arr,int i, int j) {
         int t = arr[i];
         arr[i] = arr[j];
         arr[j] = t; 
    }
- 
    public static int[] heapSort(int[] arr) {
-     
       buildheap(arr);
       int sizeOfHeap=arr.length-1;
       for(int i=sizeOfHeap; i>0; i--) {
@@ -45,16 +36,20 @@ public class Main
          sizeOfHeap=sizeOfHeap-1;
          heapify(arr, 0,sizeOfHeap);
       }
-      return arr;
+      return arr; 
    }
  
    public static void main(String[] args) {
+      int ctr = 0;
       int[] arr={5,7,1,9,3,8,4,6};
+      ctr++;
       System.out.println("Beofre Sorting : ");
       System.out.println(Arrays.toString(arr));
       arr=heapSort(arr);
       System.out.println("===================================");
       System.out.println("After Sorting : ");
       System.out.println(Arrays.toString(arr));
+      System.out.println("===================================");
+      System.out.println("Counter Variable Count: " + ctr);
    }
 }
