@@ -53,3 +53,7 @@ public class Main {
       System.out.println("===================================");
    }
 }
+
+//Compiled Successfully. memory: 23240 time: 0.08 exit code: 0 Test 1
+//Compiled Successfully. memory: 23288 time: 0.09 exit code: 0 Test 2
+//Compiled Successfully. memory: 22964 time: 0.29 exit code: 0 Test 3
